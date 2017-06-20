@@ -8,28 +8,25 @@
       <h1>
         Cornerstone
       </h1>
-      <p>
-        You just searched for {{term}} and the result is {{result}}
-      </p>
+
       <form>
       <md-input-container>
         <input mdInput
          [(ngModel)]="term"
          name="term"
-         placeholder=" "
+         placeholder=""
          type="text"
          required>
        </md-input-container>
-       <!--
-       <button md-raised-button (click)="search()">
-       Search
-       <form action="http://google.com">
-       <input type="submit" value="Search" />
-       </form>
-      </button>
-      -->
-      <button onclick="location.href='nextpage.html'" type="button">
-        search</button>
+
+       <button md-raised-button (click)="search()">Search</button>
+
+
+      <!-- <button onclick="location.href='nextpage.html'" type="button">
+        search</button> -->
       </form>
+      <p>
+        You just searched for {{term}} and the result is {{result}}
+      </p>
   </body>
 </html>

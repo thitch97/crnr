@@ -57,10 +57,16 @@ public class App {
     ArrayList<ResultDTO> results = new ArrayList<ResultDTO>();
 
 
-    ResultDTO object = ResultDTO.builder().title("Timothy wins hackathon").url("https://www.gleaner-jamaica.com").build();
-    Integer searchid;
-
-    results.add(object);
+    ResultDTO object1 = ResultDTO.builder().title("Title 1").url("https://www.title1.com").build();
+    results.add(object1);
+    ResultDTO object2 = ResultDTO.builder().title("Title 2").url("https://www.title1.com").build();
+    results.add(object2);
+    ResultDTO object3 = ResultDTO.builder().title("Title 3").url("https://www.title1.com").build();
+    results.add(object3);
+    ResultDTO object4 = ResultDTO.builder().title("Title 4").url("https://www.title1.com").build();
+    results.add(object4);
+    ResultDTO object5 = ResultDTO.builder().title("Title 5").url("https://www.title1.com").build();
+    results.add(object5);
 
 
 
@@ -69,6 +75,7 @@ public class App {
       log.info("Loading the index");
       return "Welcome to Howard West!";
     });
+
     get(
       "/search",
       "application/json",
