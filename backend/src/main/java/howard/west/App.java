@@ -1,8 +1,11 @@
 package howard.west;
 
+import java.util.ArrayList;
 import com.google.gson.Gson;
 import howard.west.dto.ResultDTO;
 import lombok.extern.slf4j.Slf4j;
+
+import javax.xml.transform.Result;
 
 import static spark.Spark.before;
 import static spark.Spark.get;
@@ -51,6 +54,14 @@ public class App {
     //GSON is used to map to json.
     Gson gson = new Gson();
 
+    ArrayList<ResultDTO> results = new ArrayList<ResultDTO>();
+
+
+    ResultDTO object = ResultDTO.builder().title("Timothy wins hackathon").url("https://www.gleaner-jamaica.com").build();
+    Integer searchid;
+
+    results.add(object);
+
 
 
     //the route callback is a lambda function
@@ -61,7 +72,10 @@ public class App {
     get(
       "/search",
       "application/json",
-      (req, res) -> ResultDTO.builder().term(req.queryMap("q").value()),
-      gson::toJson); // <- this is called a method reference
+      (req, res) ->  {return results;},
+      gson::toJson); // <- this is called a method reference*/
+
+
+
   }
 }
