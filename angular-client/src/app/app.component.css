@@ -24,7 +24,7 @@ form {
     text-align: center;
 }
 body {
-	background: url("/Users/demouser/searchlite/angular-client/src/assets/pexels-photo-66445.jpeg") no-repeat center center;
+	background: ("assets/pexels-photo-66445.jpeg") no-repeat center center;
 	height: 170%;
   background-size: cover;
   background-color: lightblue;

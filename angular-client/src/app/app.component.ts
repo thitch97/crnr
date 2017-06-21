@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SearchService } from './search.service';
+import {MdMenuModule} from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,7 @@ import { SearchService } from './search.service';
 })
 
 
-/*export class jResult{
-
+/*export class jResult
   title:string;
   url:string;
 
@@ -18,7 +18,7 @@ import { SearchService } from './search.service';
 export class AppComponent {
   term: string;
   result: string;
-  //results:jResult[];
+  results = {};
 
 
 
@@ -28,14 +28,13 @@ export class AppComponent {
 
   search() {
 
-    console.log("The term is: " + this.term);
-    console.log("The result is: " + this.result);
 
-    console.log(this.searchService.search(this.term)
+    this.searchService.search(this.term)
       .subscribe(data => {
         this.result = JSON.stringify(data);
-        //this.results[0] = data;
-        //console.log(this.results);
-      }));
+        this.results = data;
+        console.log(this.results[0].title);
+
+      });
   }
 }

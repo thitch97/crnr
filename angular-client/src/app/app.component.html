@@ -5,6 +5,15 @@
   </head>
   <body>
 
+    <!-- <md-menu #appMenu="mdMenu">
+    <button md-menu-item> Settings </button>
+    <button md-menu-item> Help </button>
+    </md-menu>
+
+    <button md-icon-button [mdMenuTriggerFor]="appMenu">
+      <md-icon>more_vert</md-icon>
+    </button>-->
+
       <h1>
         Cornerstone
       </h1>
@@ -12,7 +21,7 @@
       <form>
       <md-input-container>
         <input mdInput
-         [(ngModel)]="term"
+
          name="term"
          placeholder=""
          type="text"
@@ -25,8 +34,10 @@
       <!-- <button onclick="location.href='nextpage.html'" type="button">
         search</button> -->
       </form>
-      <p>
-        You just searched for {{term}} and the result is {{result}}
+
+      <p *ngFor = "let result of results">
+
+        You just searched for {{result.title}} and the result is {{result.url}}
       </p>
   </body>
 </html>

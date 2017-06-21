@@ -5,8 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { MdButtonModule, MdInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchService } from './search.service';
+import {MdMenuModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     FormsModule,
     MdInputModule,
-    HttpModule
+    HttpModule,
+    MdMenuModule
   ],
   providers: [SearchService],
   bootstrap: [AppComponent]

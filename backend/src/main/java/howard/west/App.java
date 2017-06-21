@@ -1,6 +1,7 @@
 package howard.west;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import com.google.gson.Gson;
 import howard.west.dto.ResultDTO;
 import lombok.extern.slf4j.Slf4j;
@@ -79,7 +80,7 @@ public class App {
     get(
       "/search",
       "application/json",
-      (req, res) ->  {return results;},
+      (req, res) ->  {return results.toArray(new ResultDTO[results.size()]);},
       gson::toJson); // <- this is called a method reference*/
 
 
