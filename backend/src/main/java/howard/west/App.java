@@ -83,6 +83,14 @@ public class App {
       (req, res) ->  {return results.toArray(new ResultDTO[results.size()]);},
       gson::toJson); // <- this is called a method reference*/
 
+    /*get(
+            "/history",
+            "application/json",
+            (req,res) -> {return hlist;},gson::toJson);
+    */
+
+    
+
 
 
   }
