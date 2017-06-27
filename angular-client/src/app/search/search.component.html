@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+      <h1>
+        Cornerstone
+      </h1>
+      <form>
+      <md-input-container>
+        <input mdInput
+
+         name="term"
+         placeholder=""
+         type="text"
+         required>
+       </md-input-container>
+
+       <button md-raised-button (click)="search()">Search</button>
+
+
+      <!-- <button onclick="location.href='nextpage.html'" type="button">
+        search</button> -->
+      </form>
+
+      <li *ngFor = "let result of results">
+        You just searched for {{result.title}} and the result is {{result.url}}
+      </li>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+h1 {
+	font-size: 60pt;
+  text-align: left;
+	font-family: 'Open Sans',serif;
+}
+p, li {
+	font-size: 15pt;
+	background-color: rgba(225, 225, 225, 0.5);
+  position: relative;
+  left: 15%;
+	width: 75%;
+	text-align: center;
+  font-family: Courier, sans-serif;
+}
+form {
+    margin: auto;
+    width: 50%;
+    background-color: rgba(225,225,225,0.7);
+    text-align: center;
+}
+body {
+
+	height: 100%;
+  background-size: cover;
+  background-color: lightblue;
+
+}
+md-input-container {
+	height:35px;
+
+}

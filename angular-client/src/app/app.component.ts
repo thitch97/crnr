@@ -9,19 +9,4 @@ import {MdMenuModule} from '@angular/material';
 })
 
 
-export class AppComponent {
-  term: string;
-  result: string;
-  results = {};
-
-  constructor(private searchService: SearchService) {}
-
-  search() {
-    this.searchService.search(this.term)
-      .subscribe(data => {
-        this.result = JSON.stringify(data);
-        this.results = data;
-        console.log(this.results[0].title);
-      });
-  }
-}
+export class AppComponent {}

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import com.google.gson.Gson;
 import howard.west.dto.ResultDTO;
+import howard.west.dto.HistoryDTO;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.xml.transform.Result;
@@ -56,19 +57,24 @@ public class App {
     Gson gson = new Gson();
 
     ArrayList<ResultDTO> results = new ArrayList<ResultDTO>();
+    ArrayList<HistoryDTO> entries = new ArrayList<HistoryDTO>();
 
+    for (int i = 1; i <= 5; i++){
 
-    ResultDTO object1 = ResultDTO.builder().title("Title 1").url("https://www.title1.com").build();
-    results.add(object1);
-    ResultDTO object2 = ResultDTO.builder().title("Title 2").url("https://www.title1.com").build();
-    results.add(object2);
-    ResultDTO object3 = ResultDTO.builder().title("Title 3").url("https://www.title1.com").build();
-    results.add(object3);
-    ResultDTO object4 = ResultDTO.builder().title("Title 4").url("https://www.title1.com").build();
-    results.add(object4);
-    ResultDTO object5 = ResultDTO.builder().title("Title 5").url("https://www.title1.com").build();
-    results.add(object5);
+          ResultDTO object = ResultDTO.builder().title("Title "+ i).url("https://www.title"+ i +".com").build();
+          results.add(object);
+    }
 
+    for (int i = 0; i <= 5; i++){
+
+        int month = 1;
+        int year = 2010 + i;
+
+        HistoryDTO object = HistoryDTO.builder().title("Title "+ (i+1)).url("https://www.title"+ (i+1) +".com").day("0"+Integer.toString(i+1)).month("0"+Integer.toString(month)).year(Integer.toString(year)).build();
+        entries.add(object);
+
+        year++;
+    }
 
 
     //the route callback is a lambda function
@@ -78,20 +84,16 @@ public class App {
     });
 
     get(
-      "/search",
-      "application/json",
-      (req, res) ->  {return results.toArray(new ResultDTO[results.size()]);},
-      gson::toJson); // <- this is called a method reference*/
+            "/search",
+            "application/json",
+            (req, res) ->  {return results.toArray(new ResultDTO[results.size()]);},
+            gson::toJson); // <- this is called a method reference*/
 
-    /*get(
+    get(
             "/history",
             "application/json",
-            (req,res) -> {return hlist;},gson::toJson);
-    */
-
-    
-
-
+            (req,res) -> {return entries.toArray(new HistoryDTO[entries.size()]);},
+            gson::toJson);
 
   }
 }
