@@ -4,7 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import com.google.gson.Gson;
 import howard.west.dto.ResultDTO;
+
 import howard.west.dto.HistoryDTO;
+
+import howard.west.cs276.assignments.Index;
+import howard.west.cs276.assignments.Query;
+
 import lombok.extern.slf4j.Slf4j;
 
 import javax.xml.transform.Result;
@@ -56,31 +61,17 @@ public class App {
     //GSON is used to map to json.
     Gson gson = new Gson();
 
-    ArrayList<ResultDTO> results = new ArrayList<ResultDTO>();
-    ArrayList<HistoryDTO> entries = new ArrayList<HistoryDTO>();
 
-    for (int i = 1; i <= 5; i++){
 
-          ResultDTO object = ResultDTO.builder().title("Title "+ i).url("https://www.title"+ i +".com").build();
-          results.add(object);
-    }
-
-    for (int i = 0; i <= 5; i++){
-
-        int month = 1;
-        int year = 2010 + i;
-
-        HistoryDTO object = HistoryDTO.builder().title("Title "+ (i+1)).url("https://www.title"+ (i+1) +".com").day("0"+Integer.toString(i+1)).month("0"+Integer.toString(month)).year(Integer.toString(year)).build();
-        entries.add(object);
-
-        year++;
-    }
+    String indexPath = "output/tiny-index";
+    // TODO: Copy your full sized generated index to this path and uncomment this line:
+    // String indexPath = "output/index";
 
 
     //the route callback is a lambda function
     get("/", (req, res) -> {
       log.info("Loading the index");
-      return "Welcome to Howard West!";
+      return "hello world";
     });
 
     get(
