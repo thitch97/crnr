@@ -37,7 +37,30 @@ public class Query {
 		return index.readPosting(fc);
 	}
 
-	public static List<PostingList> mainQuery(String input, String query) {
+	private static List<Integer> intersect(List<Integer> l1, List<Integer> l2){
+
+		List<Integer> sect = new ArrayList<Integer>();
+		int i = 0, j = 0, c = 0;
+
+		while (i < l1.size() && j < l2.size()){
+
+			if (l1.get(i) == l2.get(j)){
+				sect.add(l1.get(i));
+				i++;
+				j++;
+			}
+			else if (l1.get(i) < l2.get(j)){
+				i++;
+			}
+			else{
+				j++;
+			}
+		}
+
+		return sect;
+	}
+
+	public static List<String> mainQuery(String input, String query) {
 
 	    try {
 
@@ -106,8 +129,23 @@ public class Query {
 		     *       containing the query terms, one document file on each
 		     *       line, sorted in lexicographical order.
 		     */
+
+			List<Integer> sect;
+
+			sect = postingLists.get(0).getList();
+
+			for (PostingList pl: postingLists){
+				sect = intersect(pl.getList(), sect);
+			}
+
+			List<String> files = new ArrayList<String>();
+
+			for ( int i = 0; i < sect.size(); i++){
+				files.add(docDict.get(sect.get(i)));
+			}
+
 		indexFile.close();
-		return postingLists;
+		return files;
 
 		} catch (Exception e) { System.out.println("ERROR " + e); }
 

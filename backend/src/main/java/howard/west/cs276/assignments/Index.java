@@ -24,7 +24,7 @@ import java.util.SortedSet;
 public class Index {
 
 	// Term id -> (position in index file, doc frequency) dictionary
-	private static Map<Integer, Pair<Long, Integer>> postingDict 
+	private static Map<Integer, Pair<Long, Integer>> postingDict
 		= new TreeMap<Integer, Pair<Long, Integer>>();
 	// Doc name -> doc id dictionary
 	private static Map<String, Integer> docDict
@@ -45,12 +45,12 @@ public class Index {
 	// Index
 	private static BaseIndex index = null;
 
-	
-	/* 
-	 * Write a posting list to the given file 
+
+	/*
+	 * Write a posting list to the given file
 	 * You should record the file position of this posting list
 	 * so that you can read it back during retrieval
-	 * 
+	 *
 	 * */
         private static void writePosting(FileChannel fc, PostingList posting)
 	    throws IOException {
@@ -147,7 +147,7 @@ public class Index {
 			// for the documents in this block.
 			Map<Integer, PostingList> posting_lists =
 			    new TreeMap<Integer, PostingList>();
-			
+
 			/* For each file */
 			for (File file : filelist){
 				++totalFileCount;
@@ -189,10 +189,10 @@ public class Index {
 			    System.err.println("Create new block failure.");
 			    return;
 			}
-			
+
 			RandomAccessFile bfc = new RandomAccessFile(blockFile, "rw");
 			FileChannel fc = bfc.getChannel();
-			
+
 			for (Integer termId : posting_lists.keySet()) {
 			    // Simply output the per-block index (that
 			    // will be merged later).
@@ -211,7 +211,7 @@ public class Index {
 
 			File b1 = blockQueue.removeFirst();
 			File b2 = blockQueue.removeFirst();
-			
+
 			File combfile = new File(output, b1.getName() + "+" + b2.getName());
 			if (!combfile.createNewFile()) {
 				System.err.println("Create new block failure.");
@@ -255,7 +255,7 @@ public class Index {
 			    writePosting(mf_fc, pl_2);
 			    pl_2 = index.readPosting(bf2_fc);
 			}
-			
+
 			bf1.close();
 			bf2.close();
 			mf.close();

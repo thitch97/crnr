@@ -7,16 +7,4 @@ import { SearchService } from './search.service';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
-  term: string;
-  result: string;
-
-  constructor(private searchService: SearchService) {}
-
-  search() {
-    this.searchService.search(this.term)
-      .subscribe(data => {
-        this.result = JSON.stringify(data);
-      });
-  }
-}
+export class AppComponent {}
