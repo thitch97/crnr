@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 
 // generated using "ng generate service search"
 @Injectable()

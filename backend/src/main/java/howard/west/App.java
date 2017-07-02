@@ -1,10 +1,18 @@
 package howard.west;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import com.google.gson.Gson;
 import howard.west.dto.ResultDTO;
+
+import howard.west.dto.HistoryDTO;
+
 import howard.west.cs276.assignments.Index;
 import howard.west.cs276.assignments.Query;
+
 import lombok.extern.slf4j.Slf4j;
+
+import javax.xml.transform.Result;
 
 import static spark.Spark.before;
 import static spark.Spark.get;
@@ -53,20 +61,34 @@ public class App {
     //GSON is used to map to json.
     Gson gson = new Gson();
 
+<<<<<<< HEAD
     //String indexPath = "output/tiny-index";
+=======
+
+
+    String indexPath = "output/tiny-index";
+>>>>>>> 7fe01aa6fd9f32e64cdbda237303ea3827abbb90
     // TODO: Copy your full sized generated index to this path and uncomment this line:
     String indexPath = "output/index";
+
 
     //the route callback is a lambda function
     get("/", (req, res) -> {
       log.info("Loading the index");
       return "hello world";
     });
+
     get(
-      "/search",
-      "application/json",
-      (req, res) -> Query.mainQuery(indexPath, req.queryMap("q").value()),
-      gson::toJson); // <- this is called a method reference
+            "/search",
+            "application/json",
+            (req, res) ->  {return results.toArray(new ResultDTO[results.size()]);},
+            gson::toJson); // <- this is called a method reference*/
+
+    get(
+            "/history",
+            "application/json",
+            (req,res) -> {return entries.toArray(new HistoryDTO[entries.size()]);},
+            gson::toJson);
 
 
 
