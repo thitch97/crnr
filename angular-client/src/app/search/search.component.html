@@ -1,31 +1,5 @@
-<<<<<<< HEAD
-<form>
-<h1>
-  Search Lite
-</h1>
-<p>
-  You just searched for {{term}} and the result is {{result}}
-</p>
 
-<md-input-container>
-  <input mdInput
-         [(ngModel)]="term"
-         name="term"
-         placeholder="term"
-         type="text"
-         required>
-</md-input-container>
-<button md-raised-button (click)="search()">
-  Search
-</button>
-</form>
-=======
-<!DOCTYPE html>
-<html>
-  <head>
 
-  </head>
-  <body>
       <h1>
         Cornerstone
       </h1>
@@ -49,6 +23,3 @@
       <li *ngFor = "let result of results">
         You just searched for {{result.title}} and the result is {{result.url}}
       </li>
-  </body>
-</html>
->>>>>>> 7fe01aa6fd9f32e64cdbda237303ea3827abbb90

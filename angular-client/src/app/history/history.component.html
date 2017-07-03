@@ -11,7 +11,7 @@
 
 
       <li *ngFor = "let entry of entries">
-        {{entry.day}}/{{entry.month}}/{{entry.year}} {{entry.title}} - {{entry.url}}
+        {{entry.url}}
       </li>
 
       <button md-raised-button (click)="history()">Get History</button>
