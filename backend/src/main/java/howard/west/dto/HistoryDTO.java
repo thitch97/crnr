@@ -12,11 +12,5 @@ import lombok.Data;
 
 public class HistoryDTO
 {
-
-    private String title;
-    private String url;
-    private String day;
-    private String month;
-    private String year;
-
+    private String term;
 }

@@ -2,6 +2,7 @@ package howard.west;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import com.google.gson.Gson;
 import howard.west.dto.ResultDTO;
 
@@ -50,6 +51,7 @@ public class App {
     });
   }
 
+
   public static void main(String[] args) {
     // by default this is 4567 in order to prevent collisions with
     // other things that may be running on the machine.  We are running in a docker container
@@ -61,16 +63,12 @@ public class App {
     //GSON is used to map to json.
     Gson gson = new Gson();
 
-<<<<<<< HEAD
+    List<HistoryDTO> history = new ArrayList<HistoryDTO>();
+    String term;
+
     //String indexPath = "output/tiny-index";
-=======
-
-
-    String indexPath = "output/tiny-index";
->>>>>>> 7fe01aa6fd9f32e64cdbda237303ea3827abbb90
     // TODO: Copy your full sized generated index to this path and uncomment this line:
     String indexPath = "output/index";
-
 
     //the route callback is a lambda function
     get("/", (req, res) -> {
@@ -81,16 +79,20 @@ public class App {
     get(
             "/search",
             "application/json",
-            (req, res) ->  {return results.toArray(new ResultDTO[results.size()]);},
-            gson::toJson); // <- this is called a method reference*/
+            (req, res) -> {
+              if (!history.contains(req.queryMap("q").value()))
+                history.add(HistoryDTO.builder().term(req.queryMap("q").value()).build());
+
+              return Query.mainQuery(indexPath, req.queryMap("q").value());},
+            gson::toJson); // <- this is called a method reference
 
     get(
             "/history",
             "application/json",
-            (req,res) -> {return entries.toArray(new HistoryDTO[entries.size()]);},
+            (req, res) -> {return history.toArray(new HistoryDTO[history.size()]);},
             gson::toJson);
 
 
-
   }
+
 }
