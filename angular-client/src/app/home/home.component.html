@@ -1,21 +1,29 @@
-
-<h1>
-  Cornerstone
-</h1>
 <form>
-
-  <md-input-container>
-    <input mdInput
-           [(ngModel)]="term"
-           name="term"
-           placeholder="term"
-           type="text"
-           required>
-  </md-input-container>
-  <button md-raised-button (click)="search()">
-    Search
-  </button>
-  </form>
-<li *ngFor = "let result of results">
+<div id="wrapper">
+  <h1>
+    <a onclick="location.href='https://www.google.com/'" type="button" class = "aclass">
+           LOG IN
+    </a>
+  </h1>
+  <div class="searchsection">
+    <div class="searchbox">
+      <md-input-container>
+        <input mdInput
+               [(ngModel)]="term"
+               name="term"
+               size="60"
+               placeholder=" "
+               type="text"
+               class="text-line"
+               required>
+      </md-input-container>
+    </div>
+    <div class="button">
+      <button md-button (click) = "search()" >SEARCH</button>
+    </div>
+  </div>
+</div>
+</form>
+<li *ngFor = 'let result of results'>
   {{result}}
 </li>

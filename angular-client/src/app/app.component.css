@@ -1,33 +1,280 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Josefin+Sans');
+html {
+    background: url("/assets/backgroundpic.png") no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left:0;
+    min-height: 100%;
+    min-width: 100%;
+}
+.text-line {
+    background-color: transparent; ;
+    color: white ;
+    outline: none;
+    outline-style: none;
+    border-top: none; 
+    border-left: none;
+    border-right: none; 
+    border-bottom: solid white 1px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px ;
+    top: -15px;
+    height: 50px;
+    width: 500px;
+    z-index: 9999;   
+}
 
-h1 {
-	font-size: 60pt;
-  text-align: center;
-	font-family: 'Open Sans',serif;
+.bg {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
 }
-p, li {
-	font-size: 15pt;
-	background-color: rgba(225, 225, 225, 0.5);
-  position: relative;
-  left: 15%;
-	width: 75%;
-	text-align: center;
-  font-family: Courier, sans-serif;
-}
-form {
+ h1{
+    color: white;
+    float: right;
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    display: block;
+    position: absolute;
+    right: 30px;
+ }
+form { 
     margin: auto;
     width: 50%;
-    background-color: rgba(225,225,225,0.7);
+    padding: 10px;
     text-align: center;
 }
-body {
-
-	height: 100%;
-  background-size: cover;
-  background-color: lightblue;
+.searchsection{
+    height: 50%;
+}
+.searchbox{
+    position: relative;
+    padding-top: 290px;
+    border-top: none; 
+    border-left: none;
+    border-right: none; 
+    border-bottom: solid white 1px;
+    width: 500px;
+}
+.button{
+    height: 50%;
+    display:inline;
+    position: relative;
+    z-index:2000;
+    margin: auto;
+    width: 50%;
+    padding-top: 200px;
+    padding-left: 175px;
+    text-align: center;
+    border: none;
+    color: red;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: "Josefin Sans", sans-serif;
 
 }
+
 md-input-container {
-	height:35px;
+    display: inline;
+    position: relative;
+    border-top: none; 
+    border-left: none;
+    border-right: none; 
+    border-bottom: solid white 2.5px;
+    z-index:1000;
+    height: 75px;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    font-size: 36px;
+    color: white;
+}
+/*@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+h1{
+    position: relative;
+    z-index:9999;
+    font-size: 20pt;
+    font-family: 'Julius Sans One', sans-serif; ;
+    text-align: left;
+    margin: auto;
+    width: 75%;
+    padding: 5px;
+    color: #ff0532;
+    float: left;
+    font-weight:bold;
+    top: 35px;
+}
+.title-text{
+    position: relative;
+    z-index:9999;
+    font-size: 20pt;
+    font-family: 'Julius Sans One', sans-serif; ;
+    text-align: left;
+    margin: auto;
+    width: 75%;
+    padding: 5px;
+    color: #ff0532;
+    float: left;
+    font-weight:bold;
+    top:-35px;
+}
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+.cb-slideshow:after { 
+    content: '';
+    background: transparent -webkit-linear-gradient(red, yellow); 
+    opacity: 0.0;
+}
+.cb-slideshow
+{
+    width: 100%;
+    height: 100%;
+}
+.cb-slideshow li span { 
+    width: 1300px;
+    height: 726px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    background-image: url("/assets/backgroundpic.png");
+    opacity: 0;
+    z-index: 1;
+    animation: imageAnimation 1000s linear;
+    animation-iteration-count: infinite;
+}
+.cb-slideshow li div { 
+    z-index: 2;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    animation: titleAnimation 36s linear infinite 0s; 
+}
+.cb-slideshow li div h3 { 
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100px;
+    padding: 0;
+    line-height: 100px; 
+}
+/*.cb-slideshow li:nth-child(1) span { 
+    background-image: url("/assets/omg1.gif");
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 1200px;
+    height: 470px;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 10%
+    height: 10%; 
+    float: right;
+   
+}!!!!!! */
+/*.searchsection{
+    height: 50%;
+}
+.searchbox{
+    padding-top: 150px;
+}
+.button{
+    height: 50%;
+    display:inline;
+    position: absolute;
+    z-index:2000;
+    margin: auto;
+    width: 50%;
+    padding-top: 200px;
+    padding-left: 175px;
+    text-align: center;
+    border: none;
+    color: red;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: 'Julius Sans One', sans-serif; ;
 
 }
+
+md-input-container {
+    display:inline;
+    position: relative;
+    border: none;
+    z-index:1000;
+    height: 100px;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+@keyframes imageAnimation { 
+    0% { opacity: 1; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 1 }
+    100% { opacity: 1 }
+}
+@keyframes titleAnimation { 
+    0% { opacity: 1 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 1 }
+    100% { opacity: 1 }
+}
+
+.text-line {
+    background-color: transparent; ;
+    font color: white ;
+    font size: 7000;
+    outline: none;
+    outline-style: none;
+    border-top: none; 
+    border-left: none;
+    border-right: none; 
+    border-bottom: solid white 2.5px;
+   /* bottom padding: 30px, 10px; */
+   /*
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5em;
+    height: 50px;
+    width: 500px;
+
+    
+}
+
+.aclass{
+    font-family: 'Julius Sans One', sans-serif; ;
+    color: red;
+    position: fixed;
+    font-size: 27pt;
+   padding-left: 35%;
+   padding-top: 500px;
+   z-index:9000;
+
+
+
+}*/

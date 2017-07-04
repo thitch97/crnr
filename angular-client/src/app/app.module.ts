@@ -16,7 +16,8 @@ import { ResultComponent } from './result/result.component';
 
 const appRoutes: Routes = [
   {path: 'history', component: HistoryComponent},
-  {path: '', component: HomeComponent}
+  {path: '', component: HomeComponent},
+  {path: 'results', component: ResultComponent}
  ]
 
 @NgModule({

@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Josefin+Sans');
+h1{
+    color: black;
+    font-size: 36px;
+    font-family:"Josefin Sans", sans-serif;
+    display: block;
+    position: relative;
+    text-align: center;
+ }
+.bg{ 
+    background-image: url("/assets/pic1.jpg") no-repeat center center;
+    background-size: cover;
+    background-image: grey;
+}
+.button{
+    height: 50%;
+    display: inline;
+    position: relative;
+    z-index: 2000;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    border: none;
+    color: red;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: "Josefin Sans", sans-serif;
+
+}
