@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { SearchService } from '../search.service'
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
 
-export class SearchComponent {
+export class HomeComponent {
 
   term: string;
   result: string;

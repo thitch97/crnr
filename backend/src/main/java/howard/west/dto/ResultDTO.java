@@ -11,5 +11,5 @@ import lombok.Data;
 @Builder
 public class ResultDTO
 {
-  private String title;
+  private String url;
 }

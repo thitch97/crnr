@@ -66,7 +66,6 @@ public class App {
     List<HistoryDTO> history = new ArrayList<HistoryDTO>();
     String term;
 
-    //String indexPath = "output/tiny-index";
     // TODO: Copy your full sized generated index to this path and uncomment this line:
     String indexPath = "output/index";
 

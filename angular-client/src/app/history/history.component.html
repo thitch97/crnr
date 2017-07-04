@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+
+
   <head>
     <title>History</title>
   </head>
@@ -8,12 +8,8 @@
         Cornerstone
       </h1>
       <h2>History</h2>
-
+      <button md-raised-button (click)="history()">Get History</button>
 
       <li *ngFor = "let entry of entries">
-        {{entry.url}}
-      </li>
-
-      <button md-raised-button (click)="history()">Get History</button>
+        
   </body>
-</html>

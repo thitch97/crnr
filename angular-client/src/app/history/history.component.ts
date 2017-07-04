@@ -18,6 +18,7 @@ export class HistoryComponent {
     .subscribe(data => {
       this.entry = JSON.stringify(data);
       this.entries = data;
+
     })
   }
 
