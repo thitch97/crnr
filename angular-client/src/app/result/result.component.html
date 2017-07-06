@@ -1,8 +1,19 @@
 <form>
-	<div class="bg">
-		<body>
+<div fxLayoutAlign="end center" fxLayout="row" fxLayoutGap="5px">
+     <div fxFlex = "7%" fxFlexOffset ="0px">
+       <nav>
+          <a onclick="location.href='https://www.google.com/'" type="button" class = "aclass">
+               LOG IN
+          </a>
+        </nav>
+      </div>
+  </div>
+	<div fxLayout = "column" fxLayoutAlign = "center center">
+		<div>
 			<h1>Search Results</h1>
-			<button md-button (click) = "search()" >SEARCH AGAIN</button>
-		</body>
+		</div>
+		<div>
+			<button md-raised-button (click) = "search()" >SEARCH AGAIN</button>
+		</div>
 	</div>
 </form>

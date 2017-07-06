@@ -1,10 +1,9 @@
 package howard.west;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.lang.*;
 import com.google.gson.Gson;
-import howard.west.dto.ResultDTO;
+
 
 import howard.west.dto.HistoryDTO;
 
@@ -63,7 +62,7 @@ public class App {
     //GSON is used to map to json.
     Gson gson = new Gson();
 
-    List<HistoryDTO> history = new ArrayList<HistoryDTO>();
+    Set<HistoryDTO> history = new HashSet<HistoryDTO>();
     String term;
 
     // TODO: Copy your full sized generated index to this path and uncomment this line:
@@ -79,7 +78,7 @@ public class App {
             "/search",
             "application/json",
             (req, res) -> {
-              if (!history.contains(req.queryMap("q").value()))
+              if (req.queryMap("q").value() != null)
                 history.add(HistoryDTO.builder().term(req.queryMap("q").value()).build());
 
               return Query.mainQuery(indexPath, req.queryMap("q").value());},

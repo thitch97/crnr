@@ -1,2 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+/*{
+	border: solid 1px white;
+}*/
+html{
+	background: url("/assets/Back.jpg") no-repeat center center;
+	background-size: cover;
+	
+}
+html, body, material-app, md-sidenav-container, .my-content {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+md-sidenav-container {
+
+	z-index: 1000;
+}

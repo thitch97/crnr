@@ -1,39 +1,49 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-h1 {
-	font-size: 60pt;
-  text-align: left;
-	font-family: 'Open Sans',sans-serif;
-}
+@import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Josefin+Sans');
+
+/*{
+
+  border: solid black 1px;
+}*/
+h1{
+    color: rgba(255,255,255,0.7);
+    font-size: 100px;
+    font-family: "Josefin Sans", sans-serif;
+ }
 h2{
 
-  text-align: left;
-	font-family: 'Open Sans',sans-serif;
+	color: rgba(255,255,255,0.7);
+  font-size: 30px;
+  font-family: "Josefin Sans", sans-serif;;
 
 }
 p, li {
 	font-size: 15pt;
-	background-color: rgba(225, 225, 225, 0.5);
-  position: relative;
-  left: 15%;
-	width: 75%;
+	width: 100%;
+  padding: 3px 0px;
 	text-align: center;
-  font-family: Courier, sans-serif;
-	padding: 5px 0px;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgba(255,255,255,0.7);
+  z-index: 1000;
+  overflow-y: scroll;
 }
 form {
-    margin: auto;
-    width: 50%;
-    background-color: rgba(225,225,225,0.7);
-    text-align: center;
+    
+    /*background-size: cover;*/
+    min-height: 100%;
+    min-width: 100%;
 }
-body {
+#historycont{
 
-	height: 100%;
-  background-size: cover;
-  background-color: lightblue;
-
+  background-color: rgba(255,255,255,0.4);
+  width: 50%;
 }
 md-input-container {
 	height:35px;
+}
+.button{
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: "Josefin Sans", sans-serif;
 
 }

@@ -1,15 +1,22 @@
 
+<head>
+  <title>History</title>
+</head>
+<body>
+<div fxLayout = "column" fxLayoutAlign ="center center">
+	<div>
+	    <h1>
+	      Cornerstone
+	    </h1>
+    </div>
+    <div>
+	    <h2>Recently Searched</h2>
+	</div>
+	<div id = "historycont" fxLayout = "column" fxLayoutAlign = "center center" fxLayoutGap = "10px">
+		<li style="list-style-type:none" *ngFor = 'let entry of entries'>
+			{{entry.term}}
+		</li>
+    </div>
+</div> 
+</body>
 
-  <head>
-    <title>History</title>
-  </head>
-  <body>
-      <h1>
-        Cornerstone
-      </h1>
-      <h2>History</h2>
-      <button md-raised-button (click)="history()">Get History</button>
-
-      <li *ngFor = "let entry of entries">
-        
-  </body>

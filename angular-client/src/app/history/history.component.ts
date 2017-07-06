@@ -6,20 +6,23 @@ import { HistoryService } from '../history.service'
   templateUrl: './history.component.html',
   styleUrls: ['./history.component.css']
 })
-export class HistoryComponent {
+export class HistoryComponent implements OnInit {
 
   entry: string;
   entries = {}
   constructor(private historyService: HistoryService) {}
 
-  history() {
+  ngOnInit() { this.history(); };
 
+
+  history() {
     this.historyService.history()
     .subscribe(data => {
       this.entry = JSON.stringify(data);
       this.entries = data;
-
+      console.log(data);
     })
   }
-
 }
+
+

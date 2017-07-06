@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SearchService } from './search.service';
 import {MdMenuModule} from '@angular/material';
+import {MdSidenavModule} from '@angular/material';
 
 @Component({
   selector: 'app-root',

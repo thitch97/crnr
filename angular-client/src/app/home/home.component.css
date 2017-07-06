@@ -1,71 +1,61 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Josefin+Sans');
-#wrapper {
-    margin-left:auto;
-    margin-right:auto;
-    width:960px;
-}
+
+/*{
+    border: solid 1px white;
+}*/
 form {
-    background: url("/assets/backgroundpic.png") no-repeat center center;
-    background-size: cover;
-    position: fixed;
-    top:0;
-    left:0;
+    
+    /*background-size: cover;*/
     min-height: 100%;
     min-width: 100%;
-    margin: auto;
-    padding: 10px;
-    text-align: center;
+}
+#crnrcont {
+
+    padding-top: 115px;
 }
 .text-line {
     background-color: transparent;
-    color: white ;
+    color: white;
     outline: none;
     outline-style: none;
     border-top: none; 
     border-left: none;
     border-right: none; 
-    border-bottom: solid white 1px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: white;
-    font-size: 36px ;
-    top: -15px;
+    font-size: 36px;
     height: 50px;
-    width: 500px;
-    z-index: 9999;   
+    width: 500px;  
 }
  h1{
+    color: rgba(255,255,255,0.7);
+   /* background-color: rgba(255,255,255,0.2);*/
+    width: 100%;
+    font-size: 150px;
+    font-family: "Josefin Sans", sans-serif;
+ }
+ nav{
+    padding-top: 15px;
     color: white;
-    float: right;
     font-size: 20px;
     font-family: "Josefin Sans", sans-serif;
-    display: block;
-    position: absolute;
-    right: 30px;
  }
-.searchbox{
-    position: absolute;
-    width: 550px;
-    padding-top: 350px;
-    padding-left: 250px;
+
+.searchbox, input{
+    width: 100%;
+    font-family: "Josefine Sans", sans-serif;
 }
+
 .button{
-    height: 50%;
-    display:inline;
-    position: relative;
-    z-index:2000;
-    width: 50%;
-    top: 420px;
-    padding-left: 75px;
-    text-align: center;
-    border: none;
-    color: white;
     font-size: 1.6em;
     font-weight: bold;
     font-family: "Josefin Sans", sans-serif;
 
+}
+
+md-raised-button {
+
+    font-family: "Josefin Sans", sans-serif;
 }
 /*
 md-input-container {
@@ -83,4 +73,4 @@ md-input-container {
     text-align: center;
     font-size: 36px;
     color: white;
-}*/
+*/
