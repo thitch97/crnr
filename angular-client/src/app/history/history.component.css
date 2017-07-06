@@ -10,6 +10,9 @@ h1{
     font-size: 100px;
     font-family: "Josefin Sans", sans-serif;
  }
+ a{
+  text-decoration: none;
+ }
 h2{
 
 	color: rgba(255,255,255,0.7);

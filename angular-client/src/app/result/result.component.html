@@ -12,8 +12,15 @@
 		<div>
 			<h1>Search Results</h1>
 		</div>
+
 		<div>
-			<button md-raised-button (click) = "search()" >SEARCH AGAIN</button>
+			<button md-raised-button (click) = "search()" [routerLink]="['/']">SEARCH AGAIN</button>
 		</div>
+		<div id = "resultscont" fxLayout = "column" fxLayoutAlign = "center center">
+			<div *ngFor = 'let result of results'>
+				{{result}}
+			</div>
+		</div>
+
 	</div>
 </form>

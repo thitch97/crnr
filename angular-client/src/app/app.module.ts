@@ -8,7 +8,10 @@ import { SearchService } from './search.service';
 import {HistoryService} from './history.service';
 import {MdMenuModule} from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
-import{ FlexLayoutModule } from '@angular/flex-layout'
+import{ FlexLayoutModule } from '@angular/flex-layout';
+
+
+
 
 import { AppComponent } from './app.component';
 import { HistoryComponent } from './history/history.component';
@@ -37,7 +40,8 @@ const appRoutes: Routes = [
     MdInputModule,
     HttpModule,
     MdMenuModule,
-    MdButtonModule
+    MdButtonModule,
+
   ],
   providers: [SearchService, HistoryService],
   bootstrap: [AppComponent]

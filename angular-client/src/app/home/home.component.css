@@ -10,9 +10,25 @@ form {
     min-height: 100%;
     min-width: 100%;
 }
+a{
+    text-decoration: none;
+
+}
 #crnrcont {
 
-    padding-top: 115px;
+    padding-top: 235px;
+}
+#resultscont{
+
+    font-family: "Josefine Sans", sans-serif;
+    color: rgba(255,255,255,0.7);
+    width: 80%;
+    height:inherit;
+    background-color: rgba(255,255,255,0.4);
+    z-index: 1000;
+    border-radius: 5px;
+
+
 }
 .text-line {
     background-color: transparent;
@@ -33,6 +49,8 @@ form {
     width: 100%;
     font-size: 150px;
     font-family: "Josefin Sans", sans-serif;
+    margin: 5px;
+
  }
  nav{
     padding-top: 15px;

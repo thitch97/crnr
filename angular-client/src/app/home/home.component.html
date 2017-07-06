@@ -10,7 +10,7 @@
   </div>
   <div id ="crnrcont" fxLayoutAlign="center center" fxLayout="column" fxLayoutGap="2px">
     
-    <h1 fxLayoutAlign="center center"> Cornerstone </h1>
+    <a href= "/" ><h1 fxLayoutAlign="center center"> Cornerstone </h1></a>
   
     <div>
       <md-input-container 
@@ -27,7 +27,15 @@
       </md-input-container>
     </div>
     <div class="button">
-      <button md-raised-button (click) = "search()" >SEARCH</button>
+      
+        <button md-raised-button (click) = "search()" [routerLink]="['./results']">SEARCH</button>
+        <!--<button md-raised-button (click) = "search()" >SEARCH</button>-->
+  
+    </div>
+    <div id = resultscont>
+      <div *ngFor = 'let result of results'>
+          {{result}}
+      </div>
     </div>
   </div>
 </form>
