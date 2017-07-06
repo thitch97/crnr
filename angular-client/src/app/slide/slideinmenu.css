@@ -1,19 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+body {
 
-/*{
-	border: solid 1px white;
-}*/
-html{
-	background: url("/assets/Back.jpg") no-repeat center center;
-	background-size: cover;
-	
-}
-html, body, material-app, md-sidenav-container, .my-content {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-
+	margin: 0px;
+	padding: 0px;
+	font-family: "Helvetica Neue", Helvetica, Arial;
 }
 
 #sidebar{
@@ -26,7 +15,6 @@ html, body, material-app, md-sidenav-container, .my-content {
 	left: -200px;
 	top: 0px;
 	transition: left 0.3s linear;
-	font-family: "Helvetica Neue", Helvetica, Arial;
 } 
 
 #sidebar.visible {
@@ -69,28 +57,25 @@ ul li a{
 	margin: 20px;
 	position: absolute;
 	top: 0px;
-	right: -60px;
-	z-index: 1000;
+	right: -60px
 }
 
 #sidebar_btn span{
 
 	height: 1px;
-	background:#ffffff;
+	background:#111;
 	margin-bottom:5px;
 	display: block;
-	
-
 }
 
 #sidebar_btn span:nth-child(2){
 	width: 75%;
-	
-
 }
 
 #sidebar_btn span:nth-child(3){
 	width: 50%;
-	
-
 }
+
+
+
+
