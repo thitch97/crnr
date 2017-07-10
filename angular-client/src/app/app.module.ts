@@ -6,6 +6,7 @@ import { MdButtonModule, MdInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchService } from './search.service';
 import {HistoryService} from './history.service';
+import { ResultService } from './result.service'; 
 import {MdMenuModule} from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import{ FlexLayoutModule } from '@angular/flex-layout';
@@ -43,7 +44,7 @@ const appRoutes: Routes = [
     MdButtonModule,
 
   ],
-  providers: [SearchService, HistoryService],
+  providers: [SearchService, HistoryService, ResultService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

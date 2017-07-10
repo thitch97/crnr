@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SearchService } from '../search.service';
+import { ResultService } from '../result.service';
+
 
 
 @Component({
@@ -11,24 +13,13 @@ import { SearchService } from '../search.service';
 
 export class ResultComponent implements OnInit {
 
- 
+  term:string;
   result: string;
   results = {};
 
-  @Input() term: string;
-
-
-  ngOnInit() { this.search(); };
+  ngOnInit() { this.results = this.resultService.getResult() };
   
 
-  constructor(private searchService: SearchService) {}
+  constructor(private resultService: ResultService) {}
 
-  search() {
-    this.searchService.search(this.term)
-      .subscribe(data => {
-        this.result = JSON.stringify(data);
-        this.results = data;
-        console.log(this.term);
-      });
-  }
 }
