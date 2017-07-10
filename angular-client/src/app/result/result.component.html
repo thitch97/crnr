@@ -17,8 +17,20 @@
 			<button md-raised-button [routerLink]="['/']">SEARCH AGAIN</button>
 		</div>
 		<div id = "resultscont" fxLayout = "column" fxLayoutAlign = "center center">
-			<div *ngFor = 'let result of results'>
+			<div *ngFor = "let result of results | paginate: { itemsPerPage: 10, currentPage: page}"> 
 				{{result}}
+				<a target ="_blank" href="https://{{result}}" id="resultlink">{{result}}</a>
+				
+			</div>
+			<div>
+				<pagination-controls 
+					(pageChange)="page = $event"
+					autoHide = "true"
+					maxSize ="5"
+					previousLabel = "Previous"
+					nextLabel = "Next">
+						
+				</pagination-controls>
 			</div>
 		</div>
 

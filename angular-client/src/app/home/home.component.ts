@@ -23,7 +23,7 @@ export class HomeComponent {
       .subscribe(data => {
         this.resultService.setResult(data);
         this.route.navigate(["../results"]);
-        console.log(this.resultService.result);
+        
      });
   }
 

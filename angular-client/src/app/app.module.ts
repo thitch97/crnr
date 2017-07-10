@@ -10,6 +10,7 @@ import { ResultService } from './result.service';
 import {MdMenuModule} from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import{ FlexLayoutModule } from '@angular/flex-layout';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 
@@ -18,6 +19,7 @@ import { AppComponent } from './app.component';
 import { HistoryComponent } from './history/history.component';
 import { HomeComponent } from './home/home.component';
 import { ResultComponent } from './result/result.component';
+
 
 const appRoutes: Routes = [
   {path: 'history', component: HistoryComponent},
@@ -42,6 +44,7 @@ const appRoutes: Routes = [
     HttpModule,
     MdMenuModule,
     MdButtonModule,
+    NgxPaginationModule
 
   ],
   providers: [SearchService, HistoryService, ResultService],
