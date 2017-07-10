@@ -1,5 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Josefin+Sans');
+@import url("https://fonts.googleapis.com/css?family=Balthazar");*/
+/*@import url("https://fonts.googleapis.com/css?family=Oswald:200");*/
+/*@import url("https://fonts.googleapis.com/css?family=Josefin+Slab:100|Oswald:200");*/
+/*@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100|Josefin+Slab:100|Oswald:200");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+SC|Alegreya+Sans+SC:100,300|Josefin+Slab:100|Oswald:200");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");*/
+/*@import url("https://fonts.googleapis.com/css?family=Play:400");
+/*@import url("https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:300" );*/
+@import url("https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Fira+Sans+Extra+Condensed:100");
 
 /*{
     border: solid 1px white;
@@ -9,6 +18,7 @@ form {
     /*background-size: cover;*/
     min-height: 100%;
     min-width: 100%;
+
 }
 #crnrcont {
 
@@ -23,39 +33,53 @@ form {
     border-left: none;
     border-right: none; 
     color: white;
-    font-size: 36px;
+    font-size: 32px;
     height: 50px;
     width: 500px;  
+    bottom padding: 5cm;
 }
  h1{
     color: rgba(255,255,255,0.7);
    /* background-color: rgba(255,255,255,0.2);*/
-    width: 100%;
-    font-size: 150px;
-    font-family: "Josefin Sans", sans-serif;
+    width:50px;
+    height: 82px;
+    /*font-size: 100px;*/
+    font-family: 'Carrois Gothic SC', sans-serif;
+    /*font-family:'Fira Sans Extra Condensed', sans-serif;*/
+    font-size: 84px;
+    padding-top: 1cm;
+    font-weight: lighter;
+     /*text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;*/
+         
+
  }
  nav{
     padding-top: 15px;
     color: white;
     font-size: 20px;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
+
  }
 
 .searchbox, input{
     width: 100%;
-    font-family: "Josefine Sans", sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
+
+
 }
 
 .button{
     font-size: 1.6em;
     font-weight: bold;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
+
 
 }
 
 md-raised-button {
 
-    font-family: "Josefin Sans", sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
+
 }
 /*
 md-input-container {
@@ -74,3 +98,6 @@ md-input-container {
     font-size: 36px;
     color: white;
 */
+.searchbox{
+    color: white;
+}

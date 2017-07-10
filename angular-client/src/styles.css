@@ -5,8 +5,10 @@
 	border: solid 1px white;
 }*/
 html{
-	background: url("/assets/Back.jpg") no-repeat center center;
+	background: url("/assets/new.png") no-repeat center center;
 	background-size: cover;
+	/*width:100px;*/
+	
 	
 }
 html, body, material-app, md-sidenav-container, .my-content {
