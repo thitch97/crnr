@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Josefin+Sans');
+
+.logincont {
+
+	padding-top: 0px;
+	
+}
+
+body {
+	/*background-color: rgba(0,0,0,0.7);*/
+}
+
+h1 {
+	color: rgba(255,255,255,0.8);
+	/* background-color: rgba(255,255,255,0.2);*/
+	width: 100%;
+	font-size: 150px;
+	font-family: "Josefin Sans", sans-serif;
+	margin: 5px;
+
+}
+
+a {
+    text-decoration: none;
+    font-family: "Josefine Sans", sans-serif;
+    color: rgba(255,255,255,0.7);
+}

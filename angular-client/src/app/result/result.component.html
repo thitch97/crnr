@@ -1,19 +1,31 @@
+<body>
+
 <form>
-<div fxLayoutAlign="end center" fxLayout="row" fxLayoutGap="5px">
-     <div fxFlex = "7%" fxFlexOffset ="0px">
-       <nav>
-          <a onclick="location.href='https://www.google.com/'" type="button" class = "aclass">
-               LOG IN
-          </a>
-        </nav>
-      </div>
-  </div>
+
 	<div fxLayout = "column" fxLayoutAlign = "center center">
 		<div>
 			<h1>Search Results</h1>
 		</div>
+
 		<div>
-			<button md-raised-button (click) = "search()" >SEARCH AGAIN</button>
+			<button md-raised-button [routerLink]="['/']">SEARCH AGAIN</button>
 		</div>
+		<div id = "resultscont" fxLayout = "column" fxLayoutAlign = "center center">
+			<div *ngFor = "let result of results | paginate: { itemsPerPage: 10, currentPage: page}"> 
+				<a target ="_blank" href="http://{{prepareURL(result)}}" id="resultlink">http://{{prepareURL(result)}}</a>
+			</div>
+			<div>
+				<pagination-controls 
+					(pageChange)="page = $event"
+					autoHide = "true"
+					maxSize ="5"
+					previousLabel = "Previous"
+					nextLabel = "Next">
+						
+				</pagination-controls>
+			</div>
+		</div>
+
 	</div>
 </form>
+</body>

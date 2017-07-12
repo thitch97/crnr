@@ -5,10 +5,18 @@
 
   border: solid black 1px;
 }*/
+
+body {
+
+  
+}
 h1{
     color: rgba(255,255,255,0.7);
     font-size: 100px;
     font-family: "Josefin Sans", sans-serif;
+ }
+ a{
+  text-decoration: none;
  }
 h2{
 

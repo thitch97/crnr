@@ -10,9 +10,25 @@ form {
     min-height: 100%;
     min-width: 100%;
 }
+
 #crnrcont {
 
     padding-top: 115px;
+}
+#resultscont{
+
+    font-family: "Josefine Sans", sans-serif;
+    color: rgba(255,255,255,0.7);
+    width: 80%;
+    background-color: rgba(255,255,255,0.4);
+
+
+}
+
+
+li {
+
+    padding: 5px 0px;
 }
 .text-line {
     background-color: transparent;

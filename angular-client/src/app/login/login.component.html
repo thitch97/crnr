@@ -1,0 +1,21 @@
+
+<body>
+	<div class="logincont" fxLayout="column" fxLayoutAlign = "center center" fxLayoutGap= "10px">
+	  
+	  	<a href= "/" ><h1 fxLayoutAlign="center center"> Cornerstone </h1></a>
+
+		<div>
+		  <button md-raised-button (click)="loginF()" id="fb">Login With Facebook</button><br>
+		</div>
+		<div>
+		  <button md-raised-button (click)="loginG()" id="google">Login With Google</button>
+		</div>
+		<div>
+		  <button md-raised-button routerLink="/email" id="email">Email</button>
+		</div>
+		<div>
+		  <a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+		</div>
+
+	</div>
+</body>

@@ -40,20 +40,11 @@ public class Query {
 	private static List<Integer> intersect(List<Integer> l1, List<Integer> l2){
 
 		List<Integer> sect = new ArrayList<Integer>();
-		int i = 0, j = 0, c = 0;
+		int i = 0, j = 0;
 
-		while (i < l1.size() && j < l2.size()){
-
-			if (l1.get(i) == l2.get(j)){
+		for(i =0; i<l1.size(); i++){
+			if(l2.contains(l1.get(i))){
 				sect.add(l1.get(i));
-				i++;
-				j++;
-			}
-			else if (l1.get(i) < l2.get(j)){
-				i++;
-			}
-			else{
-				j++;
 			}
 		}
 
@@ -114,12 +105,13 @@ public class Query {
 		    boolean noResults = false;
 		    for (String queryToken : queryTokens) {
 			// Get the term id for this token using the termDict map.
-			Integer termId = termDict.get(queryToken);
-			if (termId == null) {
-			    noResults = true;
-			    continue;
-			}
-			else postingLists.add(readPosting(indexChannel, termId));
+				Integer termId = termDict.get(queryToken);
+				if (termId == null) {
+				    noResults = true;
+				    continue;
+				}
+				else 
+					postingLists.add(readPosting(indexChannel, termId));
 		    }
 
 		    /*
@@ -133,6 +125,7 @@ public class Query {
 			List<Integer> sect;
 
 			sect = postingLists.get(0).getList();
+			System.out.println("The sect here is:"+ sect);
 
 			for (PostingList pl: postingLists){
 				sect = intersect(pl.getList(), sect);
