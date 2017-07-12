@@ -73,6 +73,31 @@ md-raised-button {
 
     font-family: "Josefin Sans", sans-serif;
 }
+
+md-card-content{
+    color: lightblue;
+    border-color: #000000 #ffffff #ffffff #000000;
+    font-size:15px;
+    height: 20px;
+    border-style:double;
+    text-align: left;
+    align-content: left;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 100px;
+    margin-left: 100px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 300px;
+    border-left-style: groove;
+    border-right-style: outset;
+    box-shadow: 0 10px 8px 0 rgba(0,0,8,0.2);
+    width: 700px;
+    height: 30px;
+    background-color: white;
+    
+}
 /*
 md-input-container {
     display: inline;
