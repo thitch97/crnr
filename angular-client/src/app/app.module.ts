@@ -12,6 +12,12 @@ import { RouterModule, Routes } from '@angular/router';
 import{ FlexLayoutModule } from '@angular/flex-layout';
 import {NgxPaginationModule} from 'ngx-pagination';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+import { environment } from '../environments/environment';
+
 
 
 
@@ -19,12 +25,14 @@ import { AppComponent } from './app.component';
 import { HistoryComponent } from './history/history.component';
 import { HomeComponent } from './home/home.component';
 import { ResultComponent } from './result/result.component';
+import { LoginComponent } from './login/login.component';
 
 
 const appRoutes: Routes = [
   {path: 'history', component: HistoryComponent},
   {path: '', component: HomeComponent},
-  {path: 'results', component: ResultComponent}
+  {path: 'results', component: ResultComponent},
+  {path: 'login', component: LoginComponent}
  ]
 
 @NgModule({
@@ -32,7 +40,8 @@ const appRoutes: Routes = [
     AppComponent,
     HistoryComponent,
     HomeComponent,
-    ResultComponent
+    ResultComponent,
+    LoginComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -44,8 +53,10 @@ const appRoutes: Routes = [
     HttpModule,
     MdMenuModule,
     MdButtonModule,
-    NgxPaginationModule
-
+    NgxPaginationModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule, 
+    AngularFireAuthModule, 
   ],
   providers: [SearchService, HistoryService, ResultService],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 
 /*{
 	border: solid 1px white;
@@ -15,6 +15,13 @@ html, body, material-app, md-sidenav-container, .my-content {
   height: 100%;
 
 }
+
+nav{
+   
+    color: white;
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+ }
 
 #sidebar{
 

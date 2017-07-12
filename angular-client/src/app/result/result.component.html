@@ -1,13 +1,7 @@
+<body>
+
 <form>
-<div fxLayoutAlign="end center" fxLayout="row" fxLayoutGap="5px">
-     <div fxFlex = "7%" fxFlexOffset ="0px">
-       <nav>
-          <a onclick="location.href='https://www.google.com/'" type="button" class = "aclass">
-               LOG IN
-          </a>
-        </nav>
-      </div>
-  </div>
+
 	<div fxLayout = "column" fxLayoutAlign = "center center">
 		<div>
 			<h1>Search Results</h1>
@@ -18,9 +12,7 @@
 		</div>
 		<div id = "resultscont" fxLayout = "column" fxLayoutAlign = "center center">
 			<div *ngFor = "let result of results | paginate: { itemsPerPage: 10, currentPage: page}"> 
-				{{result}}
-				<a target ="_blank" href="https://{{result}}" id="resultlink">{{result}}</a>
-				
+				<a target ="_blank" href="http://{{prepareURL(result)}}" id="resultlink">http://{{prepareURL(result)}}</a>
 			</div>
 			<div>
 				<pagination-controls 
@@ -36,3 +28,4 @@
 
 	</div>
 </form>
+</body>

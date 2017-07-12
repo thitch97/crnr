@@ -1,27 +1,29 @@
 import { Component } from '@angular/core';
-import { SearchService } from './search.service';
+import { SearchService } from '../search.service';
 import {MdMenuModule} from '@angular/material';
 import {MdSidenavModule} from '@angular/material';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
+import { Router } from '@angular/router';
+
+
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
 
+export class LoginComponent {
 
-export class AppComponent {
-
+  
 	items : FirebaseListObservable<any[]>;
 	user: Observable<firebase.User>;
 
 	constructor(db: AngularFireDatabase, public afAuth: AngularFireAuth){
 		this.user = afAuth.authState;
-		
 	}
 
 	//logs the user in with Google
@@ -37,4 +39,5 @@ export class AppComponent {
 	logout(){
 		this.afAuth.auth.signOut();
 	}
+
 }

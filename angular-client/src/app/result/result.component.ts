@@ -22,4 +22,8 @@ export class ResultComponent implements OnInit {
 
   constructor(private resultService: ResultService) {}
 
+  prepareURL(link:string){
+  	return link.slice(2).replace(/_/g,'/');
+  }
+
 }

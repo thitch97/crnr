@@ -1,1 +1,26 @@
-<router-outlet></router-outlet>
+
+<body>
+	<div id=sidebar fxLayout="column" fxLayoutAlign = "start center" >
+				<ul>
+					<li><a href="/login">Login</a></li>
+					<li><a href="">About Us</a></li>
+					<li><a href="/history">History</a></li>
+					<li><a href="http://github.com/SearchEngineHUWest">Github</a></li>
+				</ul>
+				<div id="buttoncont">
+					<button md-button (click)="logout()" id="google">Logout</button> 
+				</div>
+				<div id= "sidebar_btn">
+					<span></span>
+					<span></span>
+					<span></span> 
+				</div>
+	</div>
+	<div id="usercont" fxLayout= "row" fxLayoutAlign= "end center"> 
+		<div id="user" fxLayout= "column" fxLayoutAlign = "center center">
+			<img id="usrimg" src="{{(user | async)?.photoURL}}"/>
+			<span style = "padding-top: 5px">{{(user | async)?.displayName}}</span>
+		</div>
+	 </div>
+	<router-outlet></router-outlet>
+</body>
