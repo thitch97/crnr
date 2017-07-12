@@ -11,9 +11,16 @@
 			<button md-raised-button [routerLink]="['/']">SEARCH AGAIN</button>
 		</div>
 		<div id = "resultscont" fxLayout = "column" fxLayoutAlign = "center center">
-			<div *ngFor = "let result of results | paginate: { itemsPerPage: 10, currentPage: page}"> 
-				<a target ="_blank" href="http://{{prepareURL(result)}}" id="resultlink">http://{{prepareURL(result)}}</a>
+			
+			<h2 md-subheader>Results</h2>
+			<md-card>
+			<div  *ngFor = "let result of results | paginate: { itemsPerPage: 8, currentPage: page}"> 
+			
+				
+				<md-card-content><a target ="_blank" href="http://{{prepareURL(result)}}" id="resultlink">http://{{prepareURL(result)}}</a> </md-card-content>
+				
 			</div>
+			</md-card>
 			<div>
 				<pagination-controls 
 					(pageChange)="page = $event"
