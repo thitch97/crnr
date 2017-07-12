@@ -40,8 +40,6 @@ public class Query {
 	private static List<Integer> intersect(List<Integer> l1, List<Integer> l2){
 
 		List<Integer> sect = new ArrayList<Integer>();
-		int i = 0, j = 0;
-
 		for(i =0; i<l1.size(); i++){
 			if(l2.contains(l1.get(i))){
 				sect.add(l1.get(i));
